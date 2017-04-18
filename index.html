@@ -8,30 +8,40 @@
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 	<link rel="stylesheet" href="node_modules/jquery.fbmessenger-develop/dist/jquery.fbmessenger.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
 </head>
 <body>
-	<div class="background" style="display: flex;">
-		<div class="container" style="display: flex;">
-			<div class="col-md-8 col-md-offset-2" style="margin: auto;">
+	<div class="background">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-2 animated bounceIn">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-6 col-sm-4 col-xs-6">
 						<div class="phone-wrapper">
 							<img alt="iPhone 6 white" src="https://i.imgsafe.org/a2ba6b06b3.png" class="center-block img-responsive" title="" >
 							<div class="phone"></div>
 						</div>
 						
-					</div>
-					<div class="col-md-5">
-						<h1>Hi Internet, I'm Dadbot</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et perferendis commodi dolorum, non earum! Eligendi itaque vitae officiis dolorum consequatur sit, ea voluptate, a amet, debitis neque cupiditate, assumenda.</p>
-
-						<a href="" class="btn btn-default">Talk to me on Facebook</a>
+					</div>	
+					<div class="col-md-6 col-sm-8 col-xs-6">
+						<div class="intro-section">
+							<h1>Hi Internet. <br>I'm Dadbot</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et perferendis commodi dolorum, non earum! Eligendi itaque vitae officiis dolorum consequatur sit, ea voluptate, a amet, debitis neque cupiditate, assumenda.</p>
+						</div>
+						<a href="" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<nav class="navbar-fixed-bottom">
+		<div class="container">
+		  	<div class="col-md-12" class="center-block">
+		  		<p class="text-center">Built with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by <a href="http://jamesbovis.com" target="_blank">James Bovis</a> | DadBot is built using <a href="">RunDexter</a></p>
+		  		<p class="text-center">Dadbot uses an API to deliver jokes to users. Thanks to <a href="">icanhazdadjokes.com</a> for providing the information.</p>
+			</div>
+		</div>
+	</nav>
 
 
 	<script src="node_modules/jquery/dist/jquery.js"></script>
