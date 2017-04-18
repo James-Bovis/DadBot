@@ -38,7 +38,7 @@ body {
 
 .btn-default {
   background-color: #fff;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
@@ -46,7 +46,9 @@ body {
     background-color: #e6e6e6; }
 
 a {
-  color: #e92e58; }
+  color: black;
+  font-weight: 900;
+  transition: color 0.2s; }
   a:hover {
     text-decoration: none;
     color: #db2951; }

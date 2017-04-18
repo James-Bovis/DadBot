@@ -57,7 +57,7 @@ body {
 
 .btn-default {
 	background-color: #fff;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.2s ease;
 	-moz-animation-delay: 1s;
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
@@ -70,8 +70,9 @@ body {
 
 // Link color
 a {
-	color: #e92e58;
-
+	color: black;
+	font-weight: 900;
+	transition: color 0.2s;
 	&:hover {
 		text-decoration: none;
 		color: #db2951;
