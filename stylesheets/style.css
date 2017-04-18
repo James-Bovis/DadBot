@@ -1,5 +1,6 @@
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Nunito Sans', 'Helvetica', sans-serif;
+  color: black; }
 
 .navbar-fixed-bottom {
   padding-bottom: 20px; }
@@ -22,7 +23,7 @@ body {
   margin: auto; }
 
 .intro-section {
-  margin-bottom: 50px; }
+  margin-bottom: 40px; }
   .intro-section h1 {
     font-weight: 900;
     font-size: 5em;
