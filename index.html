@@ -1,0 +1,104 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DadBot</title>
+	
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="stylesheets/stle.css">
+	<link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+	<link rel="stylesheet" href="node_modules/jquery.fbmessenger-develop/dist/jquery.fbmessenger.css">
+	<style>
+		.phone-wrapper {
+		    position: relative;
+		}
+		.phone {
+		    position: absolute;
+		    top: 10.5%;
+
+		    bottom: 19.5%;
+		    left: 13.5%;
+		    right: 16%;
+		    /* background: #000; */
+		    border: 0.5px solid rgba(0, 0, 0, 0.27);
+		    border-radius: 3px;
+		    overflow: hidden;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="background" style="display: flex;">
+		<div class="container" style="display: flex;">
+			<div class="col-md-8 col-md-offset-2" style="margin: auto;">
+				<div class="row">
+					<div class="col-md-8 ">
+						<div class="phone-wrapper">
+							<img alt="iPhone 6 white" src="https://i.imgsafe.org/a2ba6b06b3.png" class="center-block img-responsive" title="" >
+							<div class="phone">
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-md-4">
+						<h1>Hi Internet, I'm Dadbot</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et perferendis commodi dolorum, non earum! Eligendi itaque vitae officiis dolorum consequatur sit, ea voluptate, a amet, debitis neque cupiditate, assumenda.</p>
+						<a href="" class="btn btn-default">Talk to me</a>
+					</div>
+				</div>
+					
+					
+				
+			</div>
+		</div>
+	</div>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/jquery.fbmessenger-develop/dist/jquery.fbmessenger.min.js"></script>
+	<script>
+    $(function() {
+      $('.phone')
+        // Initialize the plugin
+        .fbMessenger({
+          // options go here
+        })
+        // Schedule some interaction:
+        .fbMessenger('start', { delay: 5000 })
+        .fbMessenger('message', 'user', 'Get Started', { delay: 250 })
+        .fbMessenger('typingIndicator', { delay: 250 })
+        .fbMessenger('message', 'bot', 'Hello my friend, I am a jQuery plugin to fake Messenger interactions! I hope you like it.', { delay: 1500 })
+        .fbMessenger('typingIndicator', { delay: 0 })
+        .fbMessenger('message', 'bot', 'If you find my services useful, please star me on GitHub!', { delay: 1500 })
+        .fbMessenger('message', 'user', 'Hi, nice to meet you! I definitely will do!', { delay: 2000 })
+        .fbMessenger('typingIndicator', { delay: 0 })
+        .fbMessenger('message', 'bot', 'Really?', { delay: 1000 })
+        .fbMessenger('showQuickReplies', [ 'Yes!', 'Maybe...', 'Nope, just wanted to be polite' ], { delay: 2000 })
+        .fbMessenger('selectQuickReply', 0, { delay: 1000 })
+        .fbMessenger('showButtonTemplate', 'Do you use button templates?', [ 'Yes', 'No' ], { delay: 1500 })
+        .fbMessenger('selectButtonTemplate', 0, { delay: 2000 })
+        .fbMessenger('showGenericTemplate', [
+          {
+            imageUrl: '/your-first-image.png',
+            title: 'This is the first option.',
+            subtitle: 'You can have a subtitle if you like.',
+            buttons: [
+              'Button 1',
+              'Button 2'
+            ]
+          },
+          {
+            imageUrl: '/your-second-image.png',
+            title: 'This is your second option. Subtitle is optional!',
+            buttons: [
+              'Button 3',
+              'Button 4'
+            ]
+          }
+        ], { delay: 2000 })
+        .fbMessenger('scrollGenericTemplate', 1, { delay: 1000 })
+        .fbMessenger('selectGenericTemplate', 0, { delay: 1000 })
+        // And trigger the execution
+        .fbMessenger('run');
+      });
+  </script>
+</body>
+</html>

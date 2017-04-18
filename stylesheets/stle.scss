@@ -1,0 +1,100 @@
+
+.col-md-6 {
+	background-color: white;
+	padding: 50px;
+}
+
+.background {
+	height: 100vh;
+	background-position: center;
+	background-color: brown;
+	background-image: url(../images/about-me-bg.svg);
+	padding: 50px;
+}
+
+h3 {
+	margin-top: 0px;
+}
+
+// Chat Styles
+.chat {
+	overflow: auto;
+	height: 60vh;
+}
+
+.chat .answer{
+	position: relative;
+	margin-bottom: 30px;
+
+	.response {
+		    background: #ebebeb;
+    		color: #333333;
+    		padding: 15px;
+
+    	&:before {
+    		content: "";
+    		left: -30px;
+    		border-right-color: #ebebeb;
+    		border-right-width: 12px;
+		}
+	}
+}
+
+.left {
+	float: left;
+	padding-left: 80px;
+
+	.avatar {
+		position: absolute;
+		top: 0px;
+		left: 0;
+	}
+
+	.response {
+		border-radius: 0px 8px 8px 8px;
+	}
+}
+
+.right {
+	float: right;
+	text-align: right;
+	padding-right: 80px;
+
+	.avatar {
+		position: absolute;
+		top: 0px;
+		right: 0;
+	}
+
+	.response {
+		border-radius: 8px 0px 8px 8px;
+	}
+}
+
+
+//  Delay
+#answer-1 {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 1s;
+}
+
+#answer-2 {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 4s;
+}
+
+#answer-3 {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 6s;
+}
+#answer-4 {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 8s;
+}
+
+.hide {
+	display: none;
+	-webkit-animation-delay: 8s;
+	transition: 0.5s ease;
+
+}
