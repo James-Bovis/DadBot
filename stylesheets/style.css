@@ -1,15 +1,54 @@
 body {
   font-family: 'Lato', sans-serif; }
 
+.navbar-fixed-bottom {
+  padding-bottom: 20px; }
+
 .background {
   height: 100vh;
   background-position: center;
   background-color: #ede0cc;
-  padding: 50px; }
+  display: flex; }
 
-h1 {
-  font-weight: 900;
-  margin-top: 0px; }
+.container {
+  display: flex; }
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.col-md-10 {
+  margin: auto; }
+
+.intro-section {
+  margin-bottom: 50px; }
+  .intro-section h1 {
+    font-weight: 900;
+    font-size: 5em;
+    letter-spacing: -2px;
+    margin-top: 0px; }
+  .intro-section p {
+    font-size: 1.5em;
+    font-weight: 300; }
+
+.btn span {
+  margin-right: 5px; }
+
+.btn-default {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+  .btn-default:hover {
+    background-color: #e6e6e6; }
+
+a {
+  color: #e92e58; }
+  a:hover {
+    text-decoration: none;
+    color: #db2951; }
 
 .phone-wrapper {
   position: relative; }

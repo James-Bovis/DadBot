@@ -1,22 +1,80 @@
-// Background Styles
-
 body {
 	font-family: 'Lato', sans-serif;
 }
 
+// Sticky footer styles
+.navbar-fixed-bottom {
+	padding-bottom: 20px;
+}
+
+// Container and centering styles for content
 .background {
 	height: 100vh;
 	background-position: center;
 	background-color: #ede0cc;
-	padding: 50px;
+	display: flex;
 }
 
+.container {
+	display: flex;
+}
 
-// Typeography Styles
+	.row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 
-h1 {
-	font-weight: 900;
-	margin-top: 0px;
+		.col-md-10 {
+			margin: auto;
+		}
+
+			.intro-section {
+				margin-bottom: 50px;
+
+				// Typeography Styles
+				h1 {
+					font-weight: 900;
+					font-size: 5em;
+				    letter-spacing: -2px;
+				    margin-top: 0px;
+				}
+
+				p {	
+					font-size: 1.5em;
+					font-weight: 300;
+				}
+			}
+
+
+// Button Styles for Messenger Icon 
+.btn {
+	span {
+		margin-right: 5px;
+	}
+}
+
+.btn-default {
+	background-color: #fff;
+	transition: background-color 0.3s ease;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+  
+
+	&:hover {
+		background-color: #e6e6e6;
+	}
+}
+
+// Link color
+a {
+	color: #e92e58;
+
+	&:hover {
+		text-decoration: none;
+		color: #db2951;
+	}
 }
 
 
@@ -28,7 +86,6 @@ h1 {
 .phone {
     position: absolute;
     top: 10.5%;
-
     bottom: 19.5%;
     left: 13.5%;
     right: 16%;
