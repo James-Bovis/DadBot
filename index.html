@@ -24,10 +24,11 @@
 					</div>	
 					<div class="col-md-6 col-sm-8 col-xs-6">
 						<div class="intro-section">
-							<h1>Hi Internet. <br>I'm Dadbot</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et perferendis commodi dolorum, non earum! Eligendi itaque vitae officiis dolorum consequatur sit, ea voluptate, a amet, debitis neque cupiditate, assumenda.</p>
+							<h1>Hi Internet. <br>I'm Dadbot.</h1>
+							<p>I'm a fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone. I'm available 24/7, 365 days a year to provide you with an endless amount of dad jokes.</p>
+
 						</div>
-						<a href="" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
+						<a href="https://www.facebook.com/messages/t/DadJokeBot" target="_blank" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
 					</div>
 				</div>
 			</div>
@@ -37,8 +38,8 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="container">
 		  	<div class="col-md-12" class="center-block">
-		  		<p class="text-center">Built with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by <a href="http://jamesbovis.com" target="_blank">James Bovis</a> | DadBot is built using <a href="">RunDexter</a></p>
-		  		<p class="text-center">Dadbot uses an API to deliver jokes to users. Thanks to <a href="">icanhazdadjokes.com</a> for providing the information.</p>
+		  		<p class="text-center">Built with <span class="glyphicon glyphicon-heart" style="color: #db2951;" aria-hidden="true"></span> by <a href="http://jamesbovis.com" target="_blank">James Bovis</a> | DadBot is built using <a href="https://rundexter.com/" target="_blank">DEXTER</a></p>
+		  		<p class="text-center">Dadbot uses an API to deliver jokes to users. Thanks to <a href="https://icanhazdadjoke.com/" target="_blank">icanhazdadjoke.com</a> for providing the information.</p>
 			</div>
 		</div>
 	</nav>
@@ -54,40 +55,35 @@
 	          // options go here
 	        })
 	        // Schedule some interaction:
-	        .fbMessenger('start', { delay: 5000 })
-	        .fbMessenger('message', 'user', 'Get Started', { delay: 250 })
+	        .fbMessenger('start', { delay: 2000 })
+	        .fbMessenger('message', 'user', 'Get started', { delay: 250 })
 	        .fbMessenger('typingIndicator', { delay: 250 })
-	        .fbMessenger('message', 'bot', 'Hello my friend, I am a jQuery plugin to fake Messenger interactions! I hope you like it.', { delay: 1500 })
-	        .fbMessenger('typingIndicator', { delay: 0 })
-	        .fbMessenger('message', 'bot', 'If you find my services useful, please star me on GitHub!', { delay: 1500 })
-	        .fbMessenger('message', 'user', 'Hi, nice to meet you! I definitely will do!', { delay: 2000 })
-	        .fbMessenger('typingIndicator', { delay: 0 })
-	        .fbMessenger('message', 'bot', 'Really?', { delay: 1000 })
-	        .fbMessenger('showQuickReplies', [ 'Yes!', 'Maybe...', 'Nope, just wanted to be polite' ], { delay: 2000 })
+	        .fbMessenger('message', 'bot', 'Hi there! Pleased to meet you! Im DadBot, how about a joke?', { delay: 1500 })
+	        .fbMessenger('showQuickReplies', [ 'Yes please','No thanks' ], { delay: 2000 })
 	        .fbMessenger('selectQuickReply', 0, { delay: 1000 })
-	        .fbMessenger('showButtonTemplate', 'Do you use button templates?', [ 'Yes', 'No' ], { delay: 1500 })
-	        .fbMessenger('selectButtonTemplate', 0, { delay: 2000 })
-	        .fbMessenger('showGenericTemplate', [
-	          {
-	            imageUrl: '/your-first-image.png',
-	            title: 'This is the first option.',
-	            subtitle: 'You can have a subtitle if you like.',
-	            buttons: [
-	              'Button 1',
-	              'Button 2'
-	            ]
-	          },
-	          {
-	            imageUrl: '/your-second-image.png',
-	            title: 'This is your second option. Subtitle is optional!',
-	            buttons: [
-	              'Button 3',
-	              'Button 4'
-	            ]
-	          }
-	        ], { delay: 2000 })
-	        .fbMessenger('scrollGenericTemplate', 1, { delay: 1000 })
-	        .fbMessenger('selectGenericTemplate', 0, { delay: 1000 })
+	        .fbMessenger('message', 'bot', 'Coming up!', { delay: 1000 })
+	        .fbMessenger('typingIndicator', { delay: 250 })
+	        .fbMessenger('message', 'bot', 'I used to work for a soft drink can crusher. It was soda pressing.', { delay: 1000 })
+	        .fbMessenger('message', 'bot', 'Fancy another one?', { delay: 2000 })
+	        .fbMessenger('showQuickReplies', [ 'Defo!','No thanks' ], { delay: 2000 })
+	        .fbMessenger('selectQuickReply', 0, { delay: 2000 })
+	        .fbMessenger('typingIndicator', { delay: 250 })
+	        .fbMessenger('message', 'bot', 'What do you call a group of killer whales playing instruments? An Orca-stra.', { delay: 1000 })
+	        .fbMessenger('typingIndicator', { delay: 250 })
+	        .fbMessenger('message', 'bot', 'Another one?', { delay: 1000 })
+	        .fbMessenger('showQuickReplies', [ 'Definately','No right now' ], { delay: 2000 })
+	        .fbMessenger('selectQuickReply', 0, { delay: 2000 })
+	        .fbMessenger('typingIndicator', { delay: 250 })
+	        .fbMessenger('message', 'bot', 'One of my personal favorites...', { delay: 1000 })
+	        .fbMessenger('typingIndicator', { delay: 250 })
+	        .fbMessenger('message', 'bot', 'What time did the man go to the dentist?... Tooth hurt-y.', { delay: 1000 })
+	        .fbMessenger('typingIndicator', { delay: 250 })
+			.fbMessenger('message', 'bot', 'Good one yeah? Want more?', { delay: 1000 })
+			.fbMessenger('showQuickReplies', [ 'Yes','No thanks' ], { delay: 2000 })
+	        .fbMessenger('selectQuickReply', 1, { delay: 2000 })
+	        .fbMessenger('message', 'bot', 'So soon? Well its been fun! Be sure to come back anytime.', { delay: 3000 })
+
+	        
 	        // And trigger the execution
 	        .fbMessenger('run');
 	      });
