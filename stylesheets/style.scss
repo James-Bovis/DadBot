@@ -1,6 +1,7 @@
 body {
 	font-family: 'Nunito Sans', 'Helvetica', sans-serif;
 	color: black;
+	background-color: #ede0cc;
 }
 
 // Sticky footer styles
@@ -10,9 +11,8 @@ body {
 
 // Container and centering styles for content
 .background {
-	height: 100vh;
-	background-position: center;
-	background-color: #ede0cc;
+	height: 100%;
+	
 	display: flex;
 }
 
@@ -36,7 +36,7 @@ body {
 				// Typeography Styles
 				h1 {
 					font-weight: 900;
-					font-size: 5em;
+					font-size: 60px;
 				    letter-spacing: -2px;
 				    margin-top: 0px;
 				}
@@ -95,4 +95,24 @@ a {
     border: 0.5px solid rgba(0, 0, 0, 0.27);
     border-radius: 3px;
     overflow: hidden;
+}
+
+// Responsive Styles 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+  	.intro-section{
+  		margin-bottom: 15px;
+  		text-align: center;
+  		h1 {
+  			font-size: 40px;
+  			letter-spacing: -1px;
+		}
+		
+  		p {
+  			font-size: 18px;
+  		}
+  	}
 }
