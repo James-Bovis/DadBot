@@ -13,36 +13,37 @@
 <body>
 	<div class="background">
 		<div class="container">
-			<div class="col-md-10 col-md-offset-2 animated bounceIn">
+			<div class="col-md-10 col-md-offset-2 col-sm-12 col-xs-12 animated bounceInDown">
 				<div class="row">
-					<div class="col-md-6 col-sm-4 col-xs-6">
+					<div class="col-md-6 col-sm-5 hidden-xs">
 						<div class="phone-wrapper">
 							<img alt="iPhone 6 white" src="https://i.imgsafe.org/a2ba6b06b3.png" class="center-block img-responsive" title="" >
 							<div class="phone"></div>
 						</div>
 						
 					</div>	
-					<div class="col-md-6 col-sm-8 col-xs-6">
+					<div class="col-md-6 col-sm-7 col-xs-12">
 						<div class="intro-section">
-							<h1>Hi Internet. <br>I'm Dadbot.</h1>
+							<img src="images/Dad-Bot-Icon-Mobile-02.svg" style="height: 100px; margin-bottom: 30px; " class="hidden-lg hidden-md hidden-sm img-circle img-responsive center-block" alt="">
+							<h1>Hi Internet. I'm Dadbot.</h1>
 							<p>I'm a fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone. I'm available 24/7, 365 days a year to provide you with an endless amount of dad jokes.</p>
-
 						</div>
-						<a href="https://www.facebook.com/messages/t/DadJokeBot" target="_blank" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
+
+						<a href="https://m.me/DadJokeBot" target="_blank" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<nav class="navbar-fixed-bottom">
+	<div class="navbar-nav">
 		<div class="container">
 		  	<div class="col-md-12" class="center-block">
 		  		<p class="text-center">Built with <span class="glyphicon glyphicon-heart" style="color: #db2951;" aria-hidden="true"></span> by <a href="http://jamesbovis.com" target="_blank">James Bovis</a> | DadBot is built using <a href="https://rundexter.com/" target="_blank">DEXTER</a></p>
 		  		<p class="text-center">Dadbot uses an API to deliver jokes to users. Thanks to <a href="https://icanhazdadjoke.com/" target="_blank">icanhazdadjoke.com</a> for providing the information.</p>
 			</div>
 		</div>
-	</nav>
+	</div>
 
 
 	<script src="node_modules/jquery/dist/jquery.js"></script>
@@ -87,6 +88,16 @@
 	        // And trigger the execution
 	        .fbMessenger('run');
 	      });
+	  </script>
+
+	  <script>
+	  	if ($(window).width() > 700) {
+			 $('.navbar-nav').addClass('navbar-fixed-bottom');
+			}
+			else
+			{
+			 $('.navbar-nav').removeClass('navbar-nav');
+			}
 	  </script>
 </body>
 </html>
