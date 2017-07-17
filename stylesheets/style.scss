@@ -97,6 +97,12 @@ a {
     overflow: hidden;
 }
 
+// Mobile only Icon
+.mobile-icon {
+	height: 100px;
+	margin-bottom: 30px;
+}
+
 // Responsive Styles 
 @media only screen 
   and (min-device-width: 375px) 
@@ -110,7 +116,7 @@ a {
   			font-size: 40px;
   			letter-spacing: -1px;
 		}
-		
+
   		p {
   			font-size: 18px;
   		}
