@@ -40,7 +40,8 @@ body {
   transition: background-color 0.2s ease;
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
-  animation-delay: 1s; }
+  animation-delay: 1s;
+  margin-top: 20px; }
   .btn-default:hover {
     background-color: #e6e6e6; }
 
