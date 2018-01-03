@@ -38,6 +38,7 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
 	<div class="alert-bar animated fadeInDown" role="alert">
 		<p class="text-center"><span class="glyphicon glyphicon-fire" style="color: white;" aria-hidden="true"></span> GIF's are now fully intergrated into DadBot. Chat away to find them! <span class="glyphicon glyphicon-fire" style="color: white;" aria-hidden="true"></span></p>
@@ -62,8 +63,6 @@
 
 							<a href="https://m.me/DadJokeBot" target="_blank" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
 						</div>
-
-						
 					</div>
 				</div>
 			</div>
@@ -129,10 +128,21 @@
 	  	if ($(window).width() > 700) {
 			 $('.navbar-nav').addClass('navbar-fixed-bottom');
 			}
-			else
+		else
 			{
 			 $('.navbar-nav').removeClass('navbar-nav');
 			}
+	  </script>
+
+	  <!-- Dexter Bot Window -->
+	  <script>
+		window.dexterSettings = {
+	      onLoad: function (api) {
+	        api.replyTo("web welcome");
+	      }
+	    }
+	  </script>
+	  <script>var i=document.createElement('iframe');i.style.width=0;i.style.height=0;i.style.display='none';i.src='javascript:false',i.botId='7c3c9d27-20a3-4a55-a3e7-963fd7f88d99',i.botTitle='Dad Bot',i.baseUrl='https://bots.rundexter.com';var d=document.getElementsByTagName('script');d=d[d.length-1],d.parentNode.insertBefore(i,d);var o=i.contentWindow.document;o.open()._l=function(){var e=this.createElement('script');e.src='https://rundexter.com/webwidget',this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close();
 	  </script>
 </body>
 </html>
