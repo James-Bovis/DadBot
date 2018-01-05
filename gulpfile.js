@@ -9,7 +9,6 @@ var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
-var swig = require('gulp-swig');
 
 // Compiles the sass code into css onto dist
 gulp.task('sass', function(){
