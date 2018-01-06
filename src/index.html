@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DadBot - A Facebook Messenger Bot for Dad Jokes</title>
+  <!-- Load Styles -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+  
+  <!-- Load Animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Load FB Messenger Styling -->
+	<link rel="stylesheet" href="css/jquery.fbmessenger.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,900" rel="stylesheet">
+	
+  <!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48244136-3', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+	<div class="alert-bar animated fadeInDown" role="alert">
+		<p class="text-center"><span class="glyphicon glyphicon-fire" style="color: white;" aria-hidden="true"></span> GIF's are now fully intergrated into DadBot. Chat away to find them! <span class="glyphicon glyphicon-fire" style="color: white;" aria-hidden="true"></span></p>
+	</div>
+
+	<div class="background">
+		<div class="container">
+			<div class="col-lg-10 col-md-10 col-md-offset-2 col-sm-12 col-xs-12 animated fadeInDown">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 hidden-xs">
+						<div class="phone-wrapper">
+							<img alt="iPhone 6 white" src="images/iphone-mockup.png" class="center-block img-responsive" title="" >
+							<div class="phone"></div>
+						</div>
+						
+					</div>	
+					<div class=" col-md-8 col-sm-7 col-xs-12">
+						<div class="intro-section">
+							<img src="images/Dad-Bot-Icon-Mobile-02.svg" class="mobile-icon hidden-lg hidden-md hidden-sm img-circle img-responsive center-block" alt="">
+							<h1>Hi Internet. I'm Dadbot.</h1>
+							<p>I'm a fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone. I'm available 24/7, 365 days a year to provide you with an endless amount of dad jokes.</p>
+
+							<a href="https://m.me/DadJokeBot" target="_blank" class="btn btn-default btn-lg animated bounceIn"><span><img src="images/messengerLogo.svg" width="30px;" alt=""></span> Message DadBot on Facebook</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar-nav navbar-fixed-bottom">
+		<div class="container">
+		  	<div class="col-md-12" class="center-block">
+		  		<p class="text-center">Built with <span class="glyphicon glyphicon-heart" style="color: #db2951;" aria-hidden="true"></span> by <a href="http://jamesbovis.com" target="_blank">James Bovis</a> | DadBot is built using <a href="https://rundexter.com/" target="_blank">DEXTER</a></p>
+		  		<p class="text-center">Dadbot uses an API to deliver jokes to users. Thanks to <a href="https://icanhazdadjoke.com/" target="_blank">icanhazdadjoke.com</a> for providing the information. </p>
+		  		<p class="text-center">Thanks to GIPHY and their awesome <a href="https://developers.giphy.com/docs/">API</a> for giving DadBot his amazing GIF replies.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Inlcude jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--build:js js/dadbot.min.js -->
+  	<script src="js/jquery.fbmessenger.js"></script>
+    <script src="js/dadbot-messages.js"></script>
+    <script src="js/dexter-window.js"></script>
+    <script src="js/fixed-nav-bottom.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
