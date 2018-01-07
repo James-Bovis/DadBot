@@ -9,11 +9,12 @@ var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
+var uncss = require('gulp-uncss');
 
 // Compiles the sass code into css onto dist
 gulp.task('sass', function(){
   return gulp.src('src/scss/*.scss')
-    .pipe(sass({outputStyle: ''}))
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer())
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
@@ -25,6 +26,19 @@ gulp.task('copy-css', function() {
   return gulp.src('src/css/**/*')
   .pipe(gulp.dest('dist/css'))
 })
+
+gulp.task('copy-fonts', function() {
+  return gulp.src('src/fonts/**/*')
+  .pipe(gulp.dest('dist/fonts'))
+})
+
+gulp.task('uncss', function () {
+    return gulp.src('src/css/bootstrap.min.css')
+        .pipe(uncss({
+            html: ['src/index.html']
+        }))
+        .pipe(gulp.dest('./dist/css/'));
+});
 
 // Runs browsersync on src folder
 gulp.task('browserSync', function() {
@@ -71,8 +85,8 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 
-    ['sass', 'copy-css', 'useref', 'images'],
+  runSequence('clean:dist', 'uncss', 
+    ['sass', 'copy-css', 'uncss', 'copy-fonts', 'useref', 'images'],
     callback
   )
 })

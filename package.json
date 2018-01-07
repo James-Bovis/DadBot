@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.23.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -10,6 +11,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-swig": "^0.8.0",
     "gulp-uglify": "^3.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-uncss-task": "^0.3.0",
     "gulp-useref": "^3.1.4",
     "run-sequence": "^2.2.1"
   }
