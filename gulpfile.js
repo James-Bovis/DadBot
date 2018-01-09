@@ -33,9 +33,10 @@ gulp.task('copy-fonts', function() {
 })
 
 gulp.task('uncss', function () {
-    return gulp.src('src/css/bootstrap.min.css')
+    return gulp.src('src/css/*.css')
         .pipe(uncss({
-            html: ['src/index.html']
+            html: ['src/index.html'],
+            ignore: [/jsm/]
         }))
         .pipe(gulp.dest('./dist/css/'));
 });
