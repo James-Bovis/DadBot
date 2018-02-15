@@ -13,9 +13,9 @@
 	var DATA_ATTRIBUTE = 'jquery.fbmessenger';
 	var DEFAULTS = {
 		botLogoUrl: './images/DadBot-Icon.png',
-		botName: 'jQuery.fbMessenger',
+		botName: 'DadBot',
 		botCategory: 'Software',
-		botWelcomeMessage: 'jQuery.fbMessenger is a plugin to simulate interaction with a Facebook Messenger bot on an iPhone.',
+		botWelcomeMessage: 'Im a fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone. Im available 24/7, 365 days a year to provide you with an endless amount of dad jokes.',
 		leftUser: 'bot',
 		rightUser: 'user',
 		displayedCarrier: 'o2-de',
