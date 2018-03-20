@@ -10,6 +10,7 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
+gutil = require('gulp-util')
 
 // Compiles the sass code into css onto dist
 gulp.task('sass', function(){
@@ -64,6 +65,7 @@ gulp.task('useref', function(){
     .pipe(useref())
     // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(gulp.dest('dist'))
 });
 
