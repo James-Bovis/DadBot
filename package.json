@@ -3,6 +3,7 @@
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.23.2",
+    "buddyworks-cli": "^1.0.7",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
