@@ -8,39 +8,40 @@ var del = require('del');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
-var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
-gutil = require('gulp-util')
 var concat = require('gulp-concat');
 
-// Compiles the sass code into css onto dist
+
+// Compiles the SCSS sheets code into CSS in SRC
 gulp.task('sass', function(){
   return gulp.src('src/scss/*.scss')
-    .pipe(sass({outputStyle: 'compact'}))
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
-gulp.task('copy-css', function() {
-  return gulp.src('src/css/**/*')
-  .pipe(gulp.dest('dist/css'))
-})
-
+// Copies the font files into dist/fonts
 gulp.task('copy-fonts', function() {
   return gulp.src('src/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
 })
 
+// Goes though all the CSS files in SRC/CSS and strips out anything thats not being used
 gulp.task('uncss', function () {
-    return gulp.src('src/css/*.css')
-        .pipe(uncss({
-            html: ['src/index.html'],
-            ignore: [ '/jsm/' ]
-        }))
-        .pipe(gulp.dest('dist/css/'));
+  // Go through every CSS file EXCEPT the fbmessenger.css file
+  return gulp.src(['src/css/*.css', '!src/css/fbmessenger.css'])
+    .pipe(uncss({
+        html: ['src/index.html'],
+    }))
+    .pipe(gulp.dest('src/css/uncss/'));
 });
+
+gulp.task('copy-css', function() {
+  return gulp.src('src/css/fbmessenger.css')
+  .pipe(gulp.dest('src/css/uncss'))
+})
 
 // Runs browsersync on src folder
 gulp.task('browserSync', function() {
@@ -59,13 +60,12 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('src/js/**/*.js', browserSync.reload); 
 });
 
-// Concentrates JS files into minified output
+// Concentrates the link and srcipt files in index.html and outputs to a single file
 gulp.task('useref', function(){
   return gulp.src('src/*.html')
     .pipe(useref())
     // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
-    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(gulp.dest('dist'))
 });
 
@@ -76,6 +76,7 @@ gulp.task('images', function(){
   .pipe(gulp.dest('dist/images'))
 });
 
+// Deletes the dist folder
 gulp.task('clean:dist', function() {
   return del.sync('dist');
 })
@@ -87,20 +88,17 @@ gulp.task('default', function (callback) {
   )
 })
 
-gulp.task('build', function (callback) {
-  runSequence('clean:dist', 'uncss', 
-    ['sass', 'copy-css', 'uncss', 'copy-fonts', 'useref', 'images'],
-    callback
-  )
-})
-
-
-gulp.task('concat', function () {
-  return gulp.src('dist/css/*.*')
-      .pipe(concat('main.css'))
-      .pipe(gulp.dest('./dist/css/'));
+// Takes the files from src/css/uncss and creates dadbot.css in dist
+gulp.task('concat', function() {
+  return gulp.src('src/css/uncss/*.css')
+    .pipe(concat('dadbot.css'))
+    .pipe(gulp.dest('./dist/css/'));
 });
 
-// sass, uncss, concat
-
+// Runs the entire build process to create a finished dist folder
+gulp.task('build', function (callback) {
+  runSequence('clean:dist', 'sass', 'uncss', 
+    ['useref', 'copy-css', 'copy-fonts', 'images'],
+    'concat')
+})
 
