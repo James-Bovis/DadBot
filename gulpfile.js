@@ -11,12 +11,12 @@ var gulpIf = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
 gutil = require('gulp-util')
+var concat = require('gulp-concat');
 
 // Compiles the sass code into css onto dist
 gulp.task('sass', function(){
   return gulp.src('src/scss/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(autoprefixer())
+    .pipe(sass({outputStyle: 'compact'}))
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -37,9 +37,9 @@ gulp.task('uncss', function () {
     return gulp.src('src/css/*.css')
         .pipe(uncss({
             html: ['src/index.html'],
-            ignore: [/jsm/]
+            ignore: [ '/jsm/' ]
         }))
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('dist/css/'));
 });
 
 // Runs browsersync on src folder
@@ -93,3 +93,14 @@ gulp.task('build', function (callback) {
     callback
   )
 })
+
+
+gulp.task('concat', function () {
+  return gulp.src('dist/css/*.*')
+      .pipe(concat('main.css'))
+      .pipe(gulp.dest('./dist/css/'));
+});
+
+// sass, uncss, concat
+
+
