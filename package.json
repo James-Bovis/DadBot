@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "animate.css": "^3.5.2",
+    "animate.css": "^3.6.1",
     "bootstrap": "^3.3.7",
-    "browser-sync": "^2.23.2",
-    "buddyworks-cli": "^1.0.7",
+    "browser-sync": "^2.24.2",
+    "buddyworks-cli": "^1.0.8",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^1.0.2",
@@ -11,11 +11,11 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-swig": "^0.8.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
-    "gulp-useref": "^3.1.4",
+    "gulp-useref": "^3.1.5",
     "gulp-util": "^3.0.8",
     "run-sequence": "^2.2.1"
   },
