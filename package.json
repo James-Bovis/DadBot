@@ -2,8 +2,8 @@
   "devDependencies": {
     "animate.css": "^3.6.1",
     "bootstrap": "^3.3.7",
-    "browser-sync": "^2.24.2",
-    "buddyworks-cli": "^1.0.8",
+    "browser-sync": "^2.24.4",
+    "buddyworks-cli": "^1.0.9",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^1.0.2",
