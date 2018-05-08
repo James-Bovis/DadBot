@@ -3,3 +3,4 @@ node_modules/
 src/css/uncss/
 debug.log
 dist/
+.DS_Store
