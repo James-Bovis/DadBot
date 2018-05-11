@@ -12,7 +12,6 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.2.1",
-    "gulp-swig": "^0.8.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
     "gulp-useref": "^3.1.5",
