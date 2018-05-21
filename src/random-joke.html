@@ -1,0 +1,76 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DadBot - A Facebook Messenger Bot for Dad Jokes</title>
+  <meta name="description" content="I'm Dadbot. A fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone to provide you with an endless amount of dad jokes.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="James Bovis">
+  
+  <!-- Open Graph -->
+  <meta property="og:description" content="I'm Dadbot. A fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone to provide you with an endless amount of dad jokes.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hi Internet, I'm DadBot">
+  <meta property="og:url" content="http://dadbot.xyz/">
+  <meta property="og:image" content="http://dadbot.xyz/images/misc/DadBot-Social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="fb:app_id" content="224843284654450">
+
+  <!--build:css css/dadbot.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/fbmessenger.css">
+  <!-- endbuild -->
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,900" rel="stylesheet">
+  
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48244136-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div class="icon-header">
+    <a href="index.html"><img src="images/Dad-Bot-Icon-Mobile-02.svg" width='100' alt=""></a>
+  </div>
+
+  <div class="background">
+    <div class="container flex-center">
+      <div class="joke-contents animated fadeInUp">
+        <h1 id="joke"></h1>
+        <a id="get-joke" class="btn btn-default btn-lg" >Get a new joke</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-nav navbar-fixed navbar-fixed-bottom">
+    <div class="container">
+        <div class="col-md-12" class="center-block">
+          <p class="text-center">Built with <span class="glyphicon glyphicon-heart" style="color: #db2951;" aria-hidden="true"></span> by <a href="http://jamesbovis.com" target="_blank">James Bovis</a> | DadBot is built using <a href="https://rundexter.com/" target="_blank">DEXTER</a></p>
+          <p class="text-center hidden-xs">Dadbot uses an API to deliver jokes to users. Thanks to <a href="https://icanhazdadjoke.com/" target="_blank">icanhazdadjoke.com</a> for providing the information. </p>
+          <p class="text-center hidden-xs">Thanks to GIPHY and their awesome <a href="https://developers.giphy.com/docs/">API</a> for giving DadBot his amazing GIF replies.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inlcude jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+  <!--build:js js/dadbot.min.js -->
+    <script src="js/jquery.fbmessenger.js"></script>
+    <script src="js/dadbot-messages.js"></script>
+    <script src="js/getRandomJoke.js"></script>
+    <script src="js/fixed-nav-bottom.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

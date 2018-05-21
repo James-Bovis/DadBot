@@ -12,7 +12,6 @@ body {
 // Container and centering styles for content
 .background {
 	height: 100%;
-	
 	display: flex;
 }
 
@@ -37,8 +36,8 @@ body {
 				h1 {
 					font-weight: 900;
 					font-size: 60px;
-				    letter-spacing: -2px;
-				    margin-top: 0px;
+			    letter-spacing: -2px;
+			    margin-top: 0px;
 				}
 
 				p {	
@@ -46,6 +45,35 @@ body {
 					font-weight: 300;
 				}
 			}
+
+
+.flex-center {
+  align-items: center;
+  text-align: center;
+}
+
+.icon-header {
+  position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+
+    img {
+      border-radius: 100%;
+    }
+}
+
+.joke-contents {
+  width: 100%;
+
+  #joke {
+    font-weight: 700;
+    line-height: 1.5;
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
 
 
 // Button Styles for Messenger Icon 
@@ -61,7 +89,7 @@ body {
 	-moz-animation-delay: 1s;
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
-	margin-top: 20px;
+	margin: 20px 0px;
   
 
 	&:hover {
@@ -136,12 +164,16 @@ strong {
   		h1 {
   			font-size: 40px;
   			letter-spacing: -1px;
-		}
+		  }
 
   		p {
   			font-size: 18px;
   		}
   	}
+
+    #joke {
+      font-size: 25px;
+    }
 }
 
 #confetti {

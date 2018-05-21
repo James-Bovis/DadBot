@@ -33,7 +33,7 @@ var concat = require('gulp-concat');
     // Go through every CSS file EXCEPT the fbmessenger.css file
     return gulp.src(['src/css/*.css', '!src/css/fbmessenger.css'])
       .pipe(uncss({
-          html: ['src/index.html'],
+          html: ['src/**/*.html'],
       }))
       .pipe(gulp.dest('src/css/uncss/'));
   });
@@ -41,7 +41,7 @@ var concat = require('gulp-concat');
 
   // Concentrates the link and srcipt files in index.html and outputs to a single file
   gulp.task('useref', function(){
-    return gulp.src('src/*.html')
+    return gulp.src('src/**/*.html')
       .pipe(useref())
       // Minifies only if it's a JavaScript file
       .pipe(gulpIf('*.js', uglify()))
@@ -108,8 +108,5 @@ var concat = require('gulp-concat');
       callback
     )
   })
-
-
-
 
 
