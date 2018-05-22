@@ -3,5 +3,5 @@ if ($(window).width() > 700) {
 }
 else
 {
- $('.navbar-nav').removeClass('navbar-nav');
+ $('.navbar-nav').removeClass('navbar-fixed-bottom');
 }
