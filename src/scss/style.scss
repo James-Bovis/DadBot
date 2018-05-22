@@ -17,6 +17,11 @@ body {
 	padding-bottom: 20px;
 }
 
+.navbar-fixed-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 // Container and centering styles for content
 .background {
 	height: 100vh;
