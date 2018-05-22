@@ -1,7 +1,14 @@
+// Set colours
+$beige: #ede0cc;
+$red: #db2951;
+$white: #fff;
+$hvr-grey: #e6e6e6;
+$black: #000000;
+
 body {
 	font-family: 'Nunito Sans', 'Helvetica', sans-serif;
-	color: black;
-	background-color: #ede0cc;
+	color: $black;
+	background-color: $beige;
 }
 
 // Sticky footer styles
@@ -11,7 +18,7 @@ body {
 
 // Container and centering styles for content
 .background {
-	height: 100%;
+	height: 100vh;
 	display: flex;
 }
 
@@ -75,25 +82,33 @@ body {
   }
 }
 
+// Buttons
+.btn {
+  transition: background-color 0.2s ease;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  margin: 20px 0px;
+  
+  &:hover {
+    background-color: $hvr-grey;
+  }
+
+  &--red {
+    background-color: $red;
+    color: white;
+  }
+
+  &--white {
+    background-color: $white;
+    color: $black
+  }
+}
 
 // Button Styles for Messenger Icon 
 .btn {
 	span {
 		margin-right: 5px;
-	}
-}
-
-.btn-default {
-	background-color: #fff;
-	transition: background-color 0.2s ease;
-	-moz-animation-delay: 1s;
-	-webkit-animation-delay: 1s;
-	animation-delay: 1s;
-	margin: 20px 0px;
-  
-
-	&:hover {
-		background-color: #e6e6e6;
 	}
 }
 
@@ -143,7 +158,7 @@ strong {
 	width: 100%;
 	padding: 15px;
 	text-align: center;
-	background-color: #db2951;
+	background-color: $red;
 	animation-delay: 1s;
 
 	p {
