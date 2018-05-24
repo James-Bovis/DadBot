@@ -95,7 +95,7 @@ var mjml = require('gulp-mjml');
     })
   })
 
-  gulp.task('emails', function () {
+  gulp.task('mjml', function () {
     return gulp.src('src/emails/mjml/*.mjml')
       .pipe(mjml())
       .pipe(gulp.dest('src/emails/html/'))
