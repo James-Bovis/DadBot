@@ -10,6 +10,7 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var uncss = require('gulp-uncss');
 var concat = require('gulp-concat');
+var mjml = require('gulp-mjml');
 
 // TASK LIST FOR BUILDING DIST VERSION
 
@@ -93,6 +94,12 @@ var concat = require('gulp-concat');
       },
     })
   })
+
+  gulp.task('emails', function () {
+    return gulp.src('src/emails/mjml/*.mjml')
+      .pipe(mjml())
+      .pipe(gulp.dest('src/emails/html/'))
+  });
 
   // Watches CSS and JS files for changes and reloads browser
   gulp.task('watch', ['browserSync', 'sass'], function (){
