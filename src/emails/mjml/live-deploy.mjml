@@ -1,0 +1,32 @@
+<mjml>
+  <mj-head>
+      <mj-preview>DadBot has been deployed to Live</mj-preview>
+      <mj-font name="Nunito Sans" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900" />
+      <mj-include path="/partials/styles.mjml" />
+  </mj-head>
+  <mj-body>
+    <mj-container background-color="#ede0cc" width="580px">
+      <!-- Include Header -->
+      <mj-include path="/partials/header.mjml" />
+
+      <!-- Image Masthead -->
+      <mj-section background-color="#ffffff" padding-top="20px" padding-bottom="0px">
+        <mj-column>
+            <mj-text align="center">
+                <h1>${invoker.name} has deployed master to dadbot.xyz</h1>
+            </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Content goes here= -->
+      <mj-section background-color="#ffffff"  padding="20px">
+        <mj-column>
+            <mj-text align="center">
+                <h2>Hooray!</h2>
+                <p>${execution.pipeline.name} has succsessfully completed and Master branch is now present on <a href="http://dadbot.xyz">dadbot.xyz</a></p>
+            </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
