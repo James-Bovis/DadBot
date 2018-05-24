@@ -1,6 +1,6 @@
 <mjml>
   <mj-head>
-      <mj-preview>DadBot has been deployed to Betq</mj-preview>
+      <mj-preview>DadBot has been deployed to Beta</mj-preview>
       <mj-font name="Nunito Sans" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900" />
       <mj-include path="/partials/styles.mjml" />
   </mj-head>
