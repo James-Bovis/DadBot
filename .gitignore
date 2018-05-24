@@ -4,3 +4,4 @@ src/css/uncss/
 debug.log
 dist/
 .DS_Store
+src/emails/html/
