@@ -62,8 +62,3 @@ $("#get-joke").click(function(e) {
         }
     });
 })
-
-
-
-
-
