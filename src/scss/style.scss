@@ -4,6 +4,7 @@ $red: #db2951;
 $white: #fff;
 $hvr-grey: #e6e6e6;
 $black: #000000;
+$blue: #337ab7;
 
 body {
 	font-family: 'Nunito Sans', 'Helvetica', sans-serif;
@@ -97,7 +98,12 @@ body {
   margin: 20px 0px;
   
   &:hover {
-    background-color: $hvr-grey;
+    opacity: 0.9;
+    color: none;
+  }
+
+  &__tweet {
+    margin-left: 10px;
   }
 
   &--red {
@@ -108,6 +114,15 @@ body {
   &--white {
     background-color: $white;
     color: $black
+  }
+
+  &--blue {
+    background-color: $blue;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 
