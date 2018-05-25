@@ -95,11 +95,15 @@ body {
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
-  margin: 20px 10px;
+  margin: 20px 0px;
   
   &:hover {
     opacity: 0.9;
     color: none;
+  }
+
+  &__tweet {
+    margin-left: 10px;
   }
 
   &--red {
