@@ -21,7 +21,7 @@ $(function() {
 
             // Append the joke to the Twitter URL
             $("#tweet-joke").on("click", function() {
-              $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + jokeText + ' - http://dadbot.xyz/random-joke');
+              $(this).attr("href", 'https://twitter.com/intent/tweet?text="' + jokeText + '" - http://dadbot.xyz/random-joke');
             });
           }
       });
@@ -57,12 +57,10 @@ $("#get-joke").click(function(e) {
 
           // Append the joke to the Twitter URL
           $("#tweet-joke").on("click", function() {
-            $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + jokeText + ' - http://dadbot.xyz/random-joke');
+            $(this).attr("href", 'https://twitter.com/intent/tweet?text="' + jokeText + '" – http://dadbot.xyz/random-joke');
           });
         }
     });
-
-
 })
 
 
