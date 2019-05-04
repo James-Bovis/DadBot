@@ -21,8 +21,10 @@ gulp.task('clean:dist', function () {
 
 // Compiles the SCSS sheets code into CSS in SRC
 gulp.task('sass', function () {
-  return gulp.src('src/scss/*.scss')
-    .pipe(sass({ outputStyle: 'compressed' }))
+  return gulp.src('src/sass/*.+(scss|sass)')
+    .pipe(sass({ outputStyle: 'compressed' })
+      .on('error', sass.logError)
+    )
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -101,7 +103,7 @@ gulp.task('mjml', function () {
 
 // Watches CSS and JS files for changes and reloads browser
 gulp.task('watch', ['browserSync', 'sass'], function () {
-  gulp.watch('src/scss/**/*.scss', ['sass'])
+  gulp.watch('src/sass/**/*.+(scss|sass)', ['sass'])
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('src/*.html', browserSync.reload)
   gulp.watch('src/js/**/*.js', browserSync.reload)
