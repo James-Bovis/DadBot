@@ -1,0 +1,166 @@
+// sass-lint:disable no-vendor-prefixes
+
+$beige: #ede0cc
+$red: #db2951
+$white: #fff
+$hvr-grey: #e6e6e6
+$black: #000
+$blue: #337ab7
+$phone-border: rgba(0, 0, 0, .27)
+
+body
+  background-color: $beige
+  color: $black
+  font-family: 'Nunito Sans', 'Helvetica', sans-serif
+
+// Sticky footer styles
+.navbar-nav
+  margin: 0
+  padding-bottom: 20px
+  width: 100%
+
+.navbar-fixed-bottom
+  bottom: 0
+  position: absolute
+
+// Container and centering styles for content
+.background
+  display: flex
+  height: 100vh
+
+.container
+  display: flex
+
+  .row
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+
+  .col-md-10
+    margin: auto
+
+  .intro-section
+    // Typeography Styles
+    h1
+      font-size: 60px
+      font-weight: 900
+      letter-spacing: -2px
+      margin-top: 0
+
+    p
+      font-size: 1.5em
+      font-weight: 300
+
+.flex-center
+  align-items: center
+  text-align: center
+
+.icon-header
+  margin-top: 4rem
+  position: absolute
+  text-align: center
+  top: 0
+  width: 100%
+
+  img
+    border-radius: 100%
+
+.joke-contents
+  width: 100%
+
+  #joke
+    font-weight: 700
+    line-height: 1.5
+    margin: 2rem 0
+    width: 100%
+
+// Buttons
+.btn
+  -moz-animation-delay: 1s
+  -webkit-animation-delay: 1s
+  animation-delay: 1s
+  margin: 20px 0
+  transition: background-color .2s ease
+
+  &:hover
+    color: none
+    opacity: .9
+
+  &__tweet
+    margin-left: 10px
+
+  &--red
+    background-color: $red
+    color: $white
+
+  &--white
+    background-color: $white
+    color: $black
+
+  &--blue
+    background-color: $blue
+    color: $white
+
+    &:hover
+      color: $white
+
+  span
+    margin-right: 5px
+
+// Link color
+a
+  color: $black
+  font-weight: 900
+  transition: color .2s
+
+  &:hover
+    color: $red
+    text-decoration: none
+
+// Phone animtaion styles
+.phone-wrapper
+  position: relative
+
+.phone
+  border: .5px solid $phone-border
+  border-radius: 3px
+  bottom: 19.5%
+  left: 13.5%
+  overflow: hidden
+  position: absolute
+  right: 16%
+  top: 10.5%
+
+// Mobile only Icon
+.mobile-icon
+  height: 100px
+  margin-bottom: 30px
+
+// Alert bar styling
+.alert-bar
+  animation-delay: 1s
+  background-color: $red
+  padding: 15px
+  position: absolute
+  text-align: center
+  width: 100%
+
+  p
+    color: $white
+    margin-bottom: 0
+
+// Responsive Styles
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) // sass-lint:disable-line max-line-length
+  .intro-section
+    margin-bottom: 15px
+    text-align: center
+
+    h1
+      font-size: 40px
+      letter-spacing: -1px
+
+    p
+      font-size: 18px
+
+  #joke
+    font-size: 25px
