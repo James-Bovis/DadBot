@@ -11,6 +11,7 @@ var gulpIf = require('gulp-if')
 var uncss = require('gulp-uncss')
 var concat = require('gulp-concat')
 var mjml = require('gulp-mjml')
+var autoprefixer = require('gulp-autoprefixer')
 
 // TASK LIST FOR BUILDING DIST VERSION
 
@@ -25,6 +26,7 @@ gulp.task('sass', function () {
     .pipe(sass({ outputStyle: 'compressed' })
       .on('error', sass.logError)
     )
+    .pipe(autoprefixer({}))
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
       stream: true
