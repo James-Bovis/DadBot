@@ -2,7 +2,7 @@
   "devDependencies": {
     "animate.css": "^3.7.0",
     "bootstrap": "^3.4.1",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "buddyworks-cli": "^1.0.9",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
