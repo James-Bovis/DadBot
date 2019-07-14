@@ -3,7 +3,6 @@ var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
 var runSequence = require('run-sequence')
 var imagemin = require('gulp-imagemin')
-var cache = require('gulp-cache')
 var del = require('del')
 var useref = require('gulp-useref')
 var uglify = require('gulp-uglify')
@@ -68,7 +67,7 @@ gulp.task('copy-fonts', function () {
 // Image compressor
 gulp.task('images', function () {
   return gulp.src('src/images/**/*.+(png|jpg|gif|svg)')
-    .pipe(cache(imagemin()))
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
 })
 
