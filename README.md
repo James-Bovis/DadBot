@@ -1,4 +1,5 @@
 # Hi Interent, I'm DadBot
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3e8c2623-0684-4bdf-abd7-d2abd6c7cb76/deploy-status)](https://app.netlify.com/sites/dadbot/deploys)
 
 This is the source code and files for dadbot.xyz.
 
