@@ -5,7 +5,7 @@
     "browser-sync": "^2.26.7",
     "buddyworks-cli": "^1.0.9",
     "del": "^5.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
