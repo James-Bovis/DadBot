@@ -15,7 +15,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "gulp-uncss": "^1.0.6",
-    "gulp-useref": "^3.1.6",
+    "gulp-useref": "^4.0.0",
     "node-sass": "^4.12.0",
     "run-sequence": "^2.2.1"
   },
