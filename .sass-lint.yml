@@ -2,7 +2,7 @@ options:
   formatter: stylish
 
 files:
-  include: 'app/assets/stylesheets/**/*.s+(a|c)ss'
+  include: 'src/**/*.s+(a|c)ss'
 
 rules:
   # Extends
@@ -11,7 +11,9 @@ rules:
   placeholder-in-extend: 0
 
   # Mixins
-  mixins-before-declarations: 1
+  mixins-before-declarations:
+    - 2
+    - exclude: ['mediawidth', 'breakpoint']
 
   # Line Spacing
   one-declaration-per-line: 1
@@ -58,8 +60,7 @@ rules:
   # Name Formats
   class-name-format:
     - 2
-    -
-      convention: hyphenatedbem
+    - convention: hyphenatedbem
       convention-explanation: 'Class must contain only lowercase letters, underscores and hyphens'
 
   function-name-format: 1
@@ -79,16 +80,15 @@ rules:
   empty-args: 1
   hex-length: 1
   hex-notation: 1
-  indentation: 1
+  indentation: 0
   leading-zero: 1
   max-line-length: 1
   max-file-line-count: 0
   nesting-depth:
     - 1
-    -
-      max-depth: 3
+    - max-depth: 3
 
-  property-sort-order: 0
+  property-sort-order: 1
   pseudo-element: 1
   quotes: 1
   shorthand-values: 1

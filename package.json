@@ -1,26 +1,48 @@
 {
-  "devDependencies": {
-    "animate.css": "^3.7.2",
-    "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.7",
-    "buddyworks-cli": "^1.0.9",
-    "del": "^5.1.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-mjml": "^2.3.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "gulp-uncss": "^1.0.6",
-    "gulp-useref": "^3.1.6",
-    "node-sass": "^4.13.1",
-    "prettier": "1.19.1",
-    "run-sequence": "^2.2.1"
-  },
+  "name": "dadbot",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "mjml": "^3.3.5"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-react": "^7.18.3",
+    "flow-bin": "^0.118.0",
+    "normalize-scss": "^7.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.1",
+    "react-transition-group": "^4.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "flow": "flow"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "node-sass": "4.13.1",
+    "prettier": "1.19.1",
+    "sass-lint": "^1.13.1"
   }
 }

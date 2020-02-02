@@ -1,0 +1,83 @@
+////////////////////////////////////////////////////////////////////////////////
+// Buttons
+////////////////////////////////////////////////////////////////////////////////
+
+// The default styles for each button including when buttons are rendered as
+// both <a> and <button> tags
+.btn,
+button
+  align-items: center
+  background: $white
+  border: .1rem solid transparent
+  border-radius: .5rem
+  color: $black
+  display: inline-flex
+  font-size: $paragraph
+  font-weight: 300
+  padding: 1rem 2rem
+  text-align: left
+  transition: background $default-animation, border $default-animation
+
+  &:hover
+    background: darken($white, 5%)
+    color: $black
+    cursor: pointer
+
+  &:focus
+    border: .1rem solid $black
+    outline: 0
+
+  &:disabled
+    background: lighten($white, 5%)
+
+    &:hover
+      cursor: not-allowed
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Supported colours
+  //////////////////////////////////////////////////////////////////////////////
+
+  &--red
+    background: $dadbot-red
+    color: $white
+
+    &:hover
+      background: darken($dadbot-red, 5%)
+      color: $white
+
+    &:disabled
+      background: lighten($dadbot-red, 5%)
+
+      &:hover
+        cursor: not-allowed
+
+  &--blue
+    background: $dadbot-blue
+    color: $white
+
+    &:hover
+      background: darken($dadbot-blue, 5%)
+      color: $white
+
+    &:disabled
+      background: lighten($dadbot-blue, 5%)
+
+      &:hover
+        cursor: not-allowed
+
+  //////////////////////////////////////////////////////////////////////////////
+  // With icons
+  //////////////////////////////////////////////////////////////////////////////
+
+  &--with-icon
+    img
+      max-width: 3rem
+
+    &--left
+      img
+        margin-right: 1rem
+
+    &--right
+      img
+        margin-left: 1rem
+
