@@ -1,0 +1,35 @@
+////////////////////////////////////////////////////////////////////////////////
+// Layout
+// This sheet contains the basic structure and scaffolding of Dadbot and should
+// not be used for the styling of components. This file only contians required
+// styles for postitional purposes
+////////////////////////////////////////////////////////////////////////////////
+
+body
+  background-color: $dadbot-beige
+  position: relative
+
+.background
+  +mediawidth(md)
+    height: 100vh
+
+  &--red
+    background-color: $dadbot-red
+
+.container
+  margin: auto
+  max-width: calc(78rem - 3rem)
+  padding: 0 1.5rem
+
+  &--wide
+    max-width: calc(100rem - 3rem)
+
+  &--center
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &--full-height
+    +mediawidth(md)
+      height: 100vh
