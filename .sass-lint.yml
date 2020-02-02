@@ -2,7 +2,7 @@ options:
   formatter: stylish
 
 files:
-  include: 'app/assets/stylesheets/**/*.s+(a|c)ss'
+  include: 'src/**/*.s+(a|c)ss'
 
 rules:
   # Extends
