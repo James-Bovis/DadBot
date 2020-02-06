@@ -1,26 +1,27 @@
-import React from 'react'
-import logo from '../assets/logo.svg'
-import '../stylesheets/App.sass'
+import React, { lazy, Suspense } from 'react'
+import '../stylesheets/app.sass'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
-}
+const Home = lazy(() => import('./components/Home'))
+const RandomJoke = lazy(() => import('./components/RandomJoke'))
 
-export default App
+const app = () => (
+  <Router>
+    <Suspense fallback={''}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/random-joke" component={RandomJoke} />
+      </Switch>
+    </Suspense>
+    <footer>
+      <p>
+        Built with by James Bovis | DadBot is built using DEXTER Dadbot uses an
+        API to deliver jokes to users. Thanks to icanhazdadjoke.com for
+        providing the information. Thanks to GIPHY and their awesome API for
+        giving DadBot his amazing GIF replies.
+      </p>
+    </footer>
+  </Router>
+)
+
+export default app
