@@ -9,7 +9,7 @@ const Home = () => (
         {`I'm a fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone. I'm available 24/7, 365 days a year to provide you with an endless amount of dad jokes.`}
       </p>
       <p>
-        <Link to="/random-joke">Link</Link>
+        <Link to="/random-joke">{'Link'}</Link>
       </p>
     </div>
   </section>
