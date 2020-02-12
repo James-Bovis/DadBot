@@ -7,26 +7,28 @@
 
 body
   position: relative
+  background-color: $dadbot-beige
 
 .background
-  height: 100vh
-
-  &--beige
-    background-color: $dadbot-beige
+  +mediawidth(md)
+    height: 100vh
 
   &--red
     background-color: $dadbot-red
-
 
 .container
   max-width: calc(78rem - 3rem)
   padding: 0 1.5rem
   margin: auto
 
+  &--wide
+    max-width: calc(100rem - 3rem)
+
   &--center
     display: flex
     justify-content: center
     flex-direction: column
+    align-items: flex-start
 
   &--full-height
     height: 100vh

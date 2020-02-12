@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Breakpoint Variables
+// This is where we define our set breakpoints and their naming convention.
+// These are derived from our Style Guide (Gromit).
+////////////////////////////////////////////////////////////////////////////////
+
+// Why px and not rem units here?
+// It turns out that media-queries are actually independent of the documents
+// styling or any other internal aspect. Meaning, that they are immune to the
+// changes to `font-size:` that we make in `_base-type.sass` and instead resort
+// to the default rem -> px conversion implemented by the browser. To correctly
+// implement the correct behavior, we have to use px units for an absolute value
+
+$xs: 0
+$sm: 600px
+$md: 760px
+$lg: 980px
+
+$breakpoint-map: (xs: $xs, sm: $sm, md: $md, lg: $lg)
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Breakpoint Mixin
+// Usage:
+// .class
+//   +mediawidth(xs/sm/md/lg)
+//      (Styles)
+////////////////////////////////////////////////////////////////////////////////
+
+=mediawidth($breakpoint)
+
+  // If the key exists in the map
+  @if map-has-key($breakpoint-map, $breakpoint)
+
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoint-map, $breakpoint))
+
+      @content

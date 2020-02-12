@@ -1,0 +1,40 @@
+////////////////////////////////////////////////////////////////////////////////
+// Homepage
+////////////////////////////////////////////////////////////////////////////////
+
+.home
+  align-items: center
+  display: flex
+  flex-direction: column
+  text-align: center
+
+  +mediawidth(lg)
+    flex-direction: row
+    text-align: left
+
+  &__phone
+    img
+      max-width: 30rem
+      width: 100%
+
+      +mediawidth(lg)
+        max-width: none
+
+  &__content
+    min-width: 50%
+
+    +mediawidth(lg)
+      padding-left: 3rem
+
+    &__title
+      font-size: $large-title
+      margin-bottom: 1rem
+
+      +mediawidth(md)
+        font-size: $x-large-title
+
+    &__sub-title
+      font-size: $paragraph
+
+      +mediawidth(md)
+        font-size: $tiny-title

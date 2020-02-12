@@ -4,9 +4,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 html
-  font-size: 10px // Allows for the 1rem = 10px conversion
-  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif
   font-display: swap
+  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif
+  font-size: 10px // Allows for the 1rem = 10px conversion
   font-weight: 300
 
 // Heading size variables
@@ -35,14 +35,25 @@ p
   margin-top: 0
 
 strong
-  font-weight: 900
   font-size: $paragraph
+  font-weight: 900
 
 a
-  font-weight: 900
-  transition: color .25s ease
   color: $black
+  font-weight: 900
   text-decoration: none
+  transition: color $default-animation
 
   &:hover
     color: $dadbot-red
+
+  &:focus
+    outline: 0
+    text-decoration: underline
+    text-decoration-color: $dadbot-red
+
+  // When links are displayed as buttons, we need to ensure they do not have the
+  // red underline when focused
+  &.btn
+    &:focus
+      text-decoration: none
