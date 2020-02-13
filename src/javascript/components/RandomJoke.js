@@ -1,8 +1,9 @@
 // @flow
 
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
-const RandomJoke = () => {
+const RandomJoke = (): React.Element<'section'> => {
   const [joke, setJoke] = React.useState('')
   const [loading, setLoading] = React.useState(true)
 
@@ -36,17 +37,27 @@ const RandomJoke = () => {
   return (
     <section className='background background--beige'>
       <div className='container container--center container--full-height'>
-        <p>{'Random joke'}</p>
-        <p>{loading ? 'Loading...' : joke}</p>
-        <button onClick={(): void => getJoke()} className='btn btn--blue'>
-          {`Get a new joke`}
-        </button>
-        <a
-          href={`https://twitter.com/intent/tweet?text=${joke}`}
-          className='btn btn--red'
-        >
-          {`Tweet joke`}
-        </a>
+        <div className='random-joke'>
+          <Link to='/' className='random-joke__logo'>
+            <img src='http://placehold.it/100' alt='' />
+          </Link>
+          <h1 className='random-joke__joke'>{joke}</h1>
+          <div className='random-joke__btn-wrapper'>
+            <button
+              onClick={(): void => getJoke()}
+              className='btn btn--white'
+              disabled={loading}
+            >
+              {loading ? 'Loading...' : 'Get a new joke'}
+            </button>
+            <a
+              href={`https://twitter.com/intent/tweet?text=${joke}`}
+              className='btn btn--blue'
+            >
+              {`Tweet joke`}
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   )

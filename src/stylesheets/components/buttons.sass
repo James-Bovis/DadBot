@@ -15,8 +15,8 @@ button
   font-size: $paragraph
   font-weight: 300
   padding: 1rem 2rem
-  transition: background $default-animation, border $default-animation
   text-align: left
+  transition: background $default-animation, border $default-animation
 
   &:hover
     background: darken($white, 5%)
@@ -25,6 +25,12 @@ button
   &:focus
     border: .1rem solid $black
     outline: 0
+
+  &:disabled
+    background: lighten($white, 5%)
+
+    &:hover
+      cursor: not-allowed
 
   //////////////////////////////////////////////////////////////////////////////
   // Supported colours
@@ -38,6 +44,12 @@ button
       background: darken($dadbot-red, 5%)
       color: $white
 
+    &:disabled
+      background: lighten($dadbot-red, 5%)
+
+      &:hover
+        cursor: not-allowed
+
   &--blue
     background: $dadbot-blue
     color: $white
@@ -45,6 +57,12 @@ button
     &:hover
       background: darken($dadbot-blue, 5%)
       color: $white
+
+    &:disabled
+      background: lighten($dadbot-blue, 5%)
+
+      &:hover
+        cursor: not-allowed
 
   //////////////////////////////////////////////////////////////////////////////
   // With icons
