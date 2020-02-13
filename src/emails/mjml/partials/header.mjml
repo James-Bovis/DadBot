@@ -1,6 +1,0 @@
-<!-- Pawsquad Logo -->
-<mj-section background-color="#ede0cc" padding="10px">
-  <mj-column>
-    <mj-image src="http://dadbot.xyz/favicon-96x96.png" border-radius="100px" width="48" />
-  </mj-column>
-</mj-section>
