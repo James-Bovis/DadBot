@@ -6,8 +6,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 body
-  position: relative
   background-color: $dadbot-beige
+  position: relative
 
 .background
   +mediawidth(md)
@@ -17,18 +17,19 @@ body
     background-color: $dadbot-red
 
 .container
+  margin: auto
   max-width: calc(78rem - 3rem)
   padding: 0 1.5rem
-  margin: auto
 
   &--wide
     max-width: calc(100rem - 3rem)
 
   &--center
-    display: flex
-    justify-content: center
-    flex-direction: column
     align-items: flex-start
+    display: flex
+    flex-direction: column
+    justify-content: center
 
   &--full-height
-    height: 100vh
+    +mediawidth(md)
+      height: 100vh

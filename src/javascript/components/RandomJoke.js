@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { Link } from 'react-router-dom'
+import DadBotIcon from '../../images/Dad-Bot-Icon-Mobile-02.svg'
 
 const RandomJoke = (): React.Element<'section'> => {
   const [joke, setJoke] = React.useState('')
@@ -39,7 +40,7 @@ const RandomJoke = (): React.Element<'section'> => {
       <div className='container container--center container--full-height'>
         <div className='random-joke'>
           <Link to='/' className='random-joke__logo'>
-            <img src='http://placehold.it/100' alt='' />
+            <img src={DadBotIcon} alt='' />
           </Link>
           <h1 className='random-joke__joke'>{joke}</h1>
           <div className='random-joke__btn-wrapper'>

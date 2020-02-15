@@ -7,33 +7,45 @@
   display: flex
   flex-direction: column
   height: 100%
-  justify-content: center
   position: relative
   text-align: center
   width: 100%
 
+  +mediawidth(md)
+    justify-content: center
+
   &__logo
-    position: absolute
-    top: 3rem
+    margin-bottom: 3rem
+    margin-top: 2rem
+
+    +mediawidth(md)
+      position: absolute
+      top: 3rem
 
     img
       border-radius: 50%
+      max-width: 10rem
 
   &__joke
-    font-size: $medium-title
+    font-size: $small-title
     margin-bottom: 5rem
 
+    +mediawidth(md)
+      font-size: $medium-title
+
   &__btn-wrapper
+    align-items: center
     display: flex
     flex-direction: column
+    margin-bottom: 5rem
 
     +mediawidth(md)
       flex-direction: row
 
     .btn
       &:first-child
-        margin-bottom: 2rem
+        margin-bottom: 1rem
 
         +mediawidth(md)
-          margin-right: 2rem
           margin-bottom: 0
+          margin-right: 2rem

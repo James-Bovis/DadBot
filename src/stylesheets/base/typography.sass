@@ -41,19 +41,36 @@ strong
 a
   color: $black
   font-weight: 900
+  position: relative
   text-decoration: none
   transition: color $default-animation
+  z-index: 1
+
+  &::after
+    background: $dadbot-red
+    bottom: .25rem
+    content: ''
+    height: .2rem
+    left: 0
+    position: absolute
+    transition: width $default-animation
+    width: 0%
+    z-index: 0
 
   &:hover
     color: $dadbot-red
 
   &:focus
     outline: 0
-    text-decoration: underline
-    text-decoration-color: $dadbot-red
+
+    &::after
+      width: 100%
 
   // When links are displayed as buttons, we need to ensure they do not have the
   // red underline when focused
   &.btn
     &:focus
       text-decoration: none
+
+      &::after
+        display: none

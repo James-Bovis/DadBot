@@ -3,6 +3,8 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
+import facebookMessengoIcon from '../../images/messengerLogo.svg'
+
 type Greeting = 'Good morning' | 'Good evening' | 'Good afternoon'
 
 const generateGreeting = (): Greeting => {
@@ -30,13 +32,19 @@ const Home = (): React.Element<'section'> => (
           <p className='home__content__sub-title'>
             {`I'm a fun, easy to use Facebook Messenger bot who lives right on your desktop or mobile phone. I'm available 24/7, 365 days a year to provide you with an endless amount of dad jokes.`}
           </p>
-          <Link
-            to='/random-joke'
+          <a
+            href='https://m.me/DadJokeBot'
             className='btn btn--with-icon btn--with-icon--left'
+            rel='noopener noreferrer'
+            target='_blank'
           >
-            <img src='http://placehold.it/50' alt='' />
+            <img src={facebookMessengoIcon} alt='' />
             {'Message DadBot on Facebook'}
-          </Link>
+          </a>
+          <div className='home__content__link'>
+            {`or tell me a `}
+            <Link to='/random-joke'>{`random joke...`}</Link>
+          </div>
         </div>
       </div>
     </div>
