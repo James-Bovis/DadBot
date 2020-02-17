@@ -6,7 +6,7 @@
     "buddyworks-cli": "^1.0.9",
     "del": "^5.1.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-if": "^3.0.0",
