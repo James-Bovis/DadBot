@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import FacebookMessengerIcon from '../../images/messengerLogo.svg'
 import DadBotIcon from '../../images/Dad-Bot-Icon-Mobile-02.svg'
 import iPhone from '../../images/iphone-mockup.png'
+import iPhoneWebp from '../../images/iphone-mockup.webp'
 
 type Greeting = 'Good morning' | 'Good evening' | 'Good afternoon'
 
@@ -28,7 +29,10 @@ const Home = (): React.Element<'section'> => (
       <div className='home'>
         <img className='home__icon' src={DadBotIcon} alt='' />
         <div className='home__phone'>
-          <img src={iPhone} alt='' />
+          <picture>
+            <source srcSet={iPhoneWebp} type='image/webp' />
+            <img alt='An iPhone' src={iPhone} />
+          </picture>
         </div>
         <div className='home__content'>
           <h1 className='home__content__title'>{`${generateGreeting()}. I'm DadBot.`}</h1>
