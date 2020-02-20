@@ -1,0 +1,54 @@
+$spinner-height: 5rem
+
+%spinner-styles
+  animation: spinner 1.2s cubic-bezier(.5, 0, .5, 1) infinite
+  border: .5rem solid
+  border-radius: 50%
+  display: block
+  height: $spinner-height
+  left: auto
+  position: absolute
+  top: auto
+  width: $spinner-height
+
+  &:nth-child(1)
+    animation-delay: -.45s
+
+  &:nth-child(2)
+    animation-delay: -.3s
+
+  &:nth-child(3)
+    animation-delay: -.15s
+
+  @keyframes spinner
+    0%
+      transform: rotate(0deg)
+
+    100%
+      transform: rotate(360deg)
+
+
+.spinner
+  align-items: center
+  display: flex
+  height: $spinner-height
+  justify-content: center
+  margin: 2rem
+  position: relative
+  width: $spinner-height
+
+  &--red
+    div
+      @extend %spinner-styles
+      border-color: $dadbot-red transparent transparent
+
+
+  &--black
+    div
+      @extend %spinner-styles
+      border-color: $black transparent transparent
+
+  &--white
+    @extend %spinner-styles
+    border-color: $white transparent transparent
+

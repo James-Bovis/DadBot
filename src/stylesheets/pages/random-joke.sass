@@ -15,8 +15,18 @@
     justify-content: center
 
   &__logo
+    border: .2rem solid transparent
+    border-radius: 50%
     margin-bottom: 3rem
-    margin-top: 2rem
+    margin-top: 3rem
+    transition: border $default-animation
+
+    &:focus
+      border: .2rem solid $dadbot-red
+      border-radius: 50%
+
+      &::after
+        display: none
 
     +mediawidth(md)
       position: absolute
@@ -25,6 +35,9 @@
     img
       border-radius: 50%
       max-width: 10rem
+
+  .spinner
+    margin-bottom: 7rem
 
   &__joke
     font-size: $small-title

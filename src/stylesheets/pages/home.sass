@@ -6,31 +6,42 @@
   align-items: center
   display: flex
   flex-direction: column
+  padding: 3rem 0
   text-align: center
 
   +mediawidth(lg)
     flex-direction: row
+    justify-content: center
+    padding: 0
     text-align: left
 
-  &__phone
-    img
-      max-width: 30rem
-      width: 100%
+  &__icon
+    border-radius: 50%
+    margin-bottom: 3rem
+    max-width: 10rem
 
-      +mediawidth(lg)
-        max-width: none
+    +mediawidth(md)
+      display: none
+
+  &__phone
+    display: none
+
+    +mediawidth(md)
+      display: block
+
+      img
+        max-width: 30rem
+        width: 100%
 
   &__content
-    min-width: 50%
-
     +mediawidth(lg)
-      padding-left: 3rem
+      max-width: 50%
 
     &__title
       font-size: $large-title
       margin-bottom: 1rem
 
-      +mediawidth(md)
+      +mediawidth(lg)
         font-size: $x-large-title
 
     &__sub-title

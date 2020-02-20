@@ -3,7 +3,9 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-import facebookMessengoIcon from '../../images/messengerLogo.svg'
+import FacebookMessengerIcon from '../../images/messengerLogo.svg'
+import DadBotIcon from '../../images/Dad-Bot-Icon-Mobile-02.svg'
+import iPhone from '../../images/iphone-mockup.png'
 
 type Greeting = 'Good morning' | 'Good evening' | 'Good afternoon'
 
@@ -24,8 +26,9 @@ const Home = (): React.Element<'section'> => (
   <section className='background'>
     <div className='container container--center container--full-height container--wide'>
       <div className='home'>
+        <img className='home__icon' src={DadBotIcon} alt='' />
         <div className='home__phone'>
-          <img src='http://placehold.it/900' alt='' />
+          <img src={iPhone} alt='' />
         </div>
         <div className='home__content'>
           <h1 className='home__content__title'>{`${generateGreeting()}. I'm DadBot.`}</h1>
@@ -38,7 +41,7 @@ const Home = (): React.Element<'section'> => (
             rel='noopener noreferrer'
             target='_blank'
           >
-            <img src={facebookMessengoIcon} alt='' />
+            <img src={FacebookMessengerIcon} alt='' />
             {'Message DadBot on Facebook'}
           </a>
           <div className='home__content__link'>

@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import DadBotIcon from '../../images/Dad-Bot-Icon-Mobile-02.svg'
+import Spinner from './Spinner'
 
 const RandomJoke = (): React.Element<'section'> => {
   const [joke, setJoke] = React.useState('')
@@ -42,7 +43,11 @@ const RandomJoke = (): React.Element<'section'> => {
           <Link to='/' className='random-joke__logo'>
             <img src={DadBotIcon} alt='' />
           </Link>
-          <h1 className='random-joke__joke'>{joke}</h1>
+          {loading ? (
+            <Spinner spinnerTheme='black' />
+          ) : (
+            <h1 className='random-joke__joke'>{joke}</h1>
+          )}
           <div className='random-joke__btn-wrapper'>
             <button
               onClick={(): void => getJoke()}
