@@ -18,7 +18,7 @@ const footer = (): React.Element<'footer'> => (
         {'DEXTER'}
       </a>
       {` Dadbot uses an API to deliver jokes to users. Thanks to `}
-      <a href='icanhazdadjoke.com' target='_blank'>
+      <a href='http://icanhazdadjoke.com' target='_blank'>
         {`icanhazdadjoke.com `}
       </a>
       {`for providing the information. Thanks to `}
