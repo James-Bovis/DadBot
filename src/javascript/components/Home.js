@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 import FacebookMessengerIcon from '../../images/messengerLogo.svg'
 import DadBotIcon from '../../images/Dad-Bot-Icon-Mobile-02.svg'
-import iPhone from '../../images/iphone-mockup.png'
-import iPhoneWebp from '../../images/iphone-mockup.webp'
+import iPhone from '../../images/dadbot-iphone-mockup.png'
+import iPhoneWebp from '../../images/dadbot-iphone-mockup.webp'
 
 type Greeting = 'Good morning' | 'Good evening' | 'Good afternoon'
 
