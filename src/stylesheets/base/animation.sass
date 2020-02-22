@@ -5,6 +5,16 @@
 // following variables control the CSS animation paramaters
 ////////////////////////////////////////////////////////////////////////////////
 
-
 $default-animation: .25s ease
 $fast-animation: .1s ease
+
+// These styles are used for react-transition-group animations which are used on
+// every page
+
+.fade-enter
+  opacity: 0
+  z-index: 1
+
+  &.fade-enter-active
+    opacity: 1
+    transition: opacity $default-animation
