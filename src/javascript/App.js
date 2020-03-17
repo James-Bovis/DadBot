@@ -19,7 +19,7 @@ const app = (): React.Node => (
           <CSSTransition key={location.key} classNames='fade' timeout={250}>
             <Switch location={location}>
               <Route exact path='/' component={Home} />
-              <Route path='/random-joke' component={RandomJoke} />
+              <Route exact path='/random-joke' component={RandomJoke} />
             </Switch>
           </CSSTransition>
           <Footer />
