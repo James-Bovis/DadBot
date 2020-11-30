@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "node-sass": "4.13.1",
-    "prettier": "2.0.4",
+    "prettier": "2.2.1",
     "sass-lint": "^1.13.1"
   }
 }
